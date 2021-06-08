@@ -14,6 +14,8 @@
     --footer-link-color: rgba(255, 255, 255, 0.6);
     --text-shadow: 2px 1px 5px #2c2c31;
     --card-color:#eeeeee;
+    --header-icon-color:#757575;
+    --command-icon-color:#AFB1B8;
     }
 *,
 *::before,
@@ -67,7 +69,23 @@ img {
     display: block;
     max-width: 100%;
 }
-
+.icon {
+    width: 20px;
+    height: 20px;
+}
+.icons-list li {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: var(--command-icon-color);
+    stroke: var(--command-icon-color);
+}
+.icons-list li:hover {
+    fill: var(--accent-color);
+    stroke: var(--accent-color);
+}
 /*Общий логотип */
 .logo {
     color: var(--logo-color);
