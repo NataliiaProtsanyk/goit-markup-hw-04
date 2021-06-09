@@ -73,12 +73,16 @@ img {
     width: 20px;
     height: 20px;
 }
-.icons-list li {
+.icons-item {
+   
+}
+.command-list .icons-list {
     width: 44px;
     height: 44px;
+    padding: 12px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    border-radius: 50%;
     fill: var(--command-icon-color);
     stroke: var(--command-icon-color);
 }
@@ -300,6 +304,33 @@ img {
     line-height: 1.1875;
     letter-spacing: 0.03em;
 }
+/* Партнеры */
+.icon-client {
+    fill: var(--command-icon-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--command-icon-color);
+    border-radius: 4px;
+    padding: 16px 32px;
+}
+.client-list {
+    display: flex;
+    justify-content: center;
+}
+.client-item:not(:last-child) {
+    margin-right: 30px;
+}
+.client-title {
+    color: var(--titel-text-color);
+    font-size: 36px;
+    margin-bottom: 50px;
+    line-height: 1.166;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
 
 /* Портфолио */
 .button-list {
@@ -412,3 +443,4 @@ img {
     color: var(--accent-color);
     font-weight: normal;
 }
+
