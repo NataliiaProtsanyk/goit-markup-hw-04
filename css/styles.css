@@ -169,7 +169,7 @@ img {
     url(../images/hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    max-width: 1600px;
+    width: 1600px;
     height: 600px;
     margin-right: auto;
     margin-left: auto;
@@ -524,8 +524,7 @@ img {
     text-transform: uppercase;
     margin-bottom: 20px;
 }
-.footer-container .icons-container {
+.footer-container {
     display: flex;
     align-items: baseline;
-    padding: 60px 0;
 }
