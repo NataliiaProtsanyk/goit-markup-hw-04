@@ -15,7 +15,9 @@
     --text-shadow: 2px 1px 5px #2c2c31;
     --card-color:#eeeeee;
     --header-icon-color:#757575;
-    --command-icon-color:#AFB1B8;
+    --command-icon-color:#afb1b8;
+    --overlay-color: rgba(47, 48, 58, 0.4);
+    --footer-icon-bt: rgba(255, 255, 255, 0.1);
     }
 *,
 *::before,
@@ -73,23 +75,7 @@ img {
     width: 20px;
     height: 20px;
 }
-.icons-item {
-   
-}
-.command-list .icons-list {
-    width: 44px;
-    height: 44px;
-    padding: 12px;
-    display: flex;
-    align-items: center;
-    border-radius: 50%;
-    fill: var(--command-icon-color);
-    stroke: var(--command-icon-color);
-}
-.icons-list li:hover {
-    fill: var(--accent-color);
-    stroke: var(--accent-color);
-}
+
 /*Общий логотип */
 .logo {
     color: var(--logo-color);
@@ -159,17 +145,39 @@ img {
 .contact-item:focus {
     color: var(--accent-color);
 }
+.icon-mail {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: currentColor;
+    align-content: center;
+}
+.icon-phone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: currentColor;
+    align-content: center;
+}
 
 /* Герой */
 .section-hero {
     background-color: var(--hero-color);
-    text-align: center;
+    background-image: 
+    linear-gradient(var(--overlay-color),
+    var(--overlay-color)), 
+    url(../images/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 1600px;
+    height: 600px;
+    margin-right: auto;
+    margin-left: auto;
     padding-top: 200px;
     padding-bottom: 200px;
 }
 .hero-title {
     color: var(--primary-whit-color);
-    background-color: var(--hero-color);
     font-weight: 900;
     line-height: 1.36;
     font-size: 44px;
@@ -233,6 +241,17 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
+.icon-features {
+    display: flex;
+    justify-content: center;
+    background-color: var(--section-command-color);
+    padding: 25px 0;
+    margin-bottom: 30px;
+}
+.icon-element {
+    width: 70px;
+    height: 70px;
+}
 .about {
     padding-top: 0;
 }
@@ -240,7 +259,7 @@ img {
     color: var(--titel-text-color);
     font-size: 36px;
     line-height: 1.166;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     text-align: center;
     letter-spacing: 0.03em;
 }
@@ -267,11 +286,7 @@ img {
     text-align: center;
     letter-spacing: 0.03em;
 }
-.command-list{
-    display: flex;
-
-}
-.command-list li:not(:last-child){
+.command-list .command-item:not(:last-child){
     margin-right: 30px;
 }
 .command-item {
@@ -284,8 +299,8 @@ img {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
-.command-description{
-    padding: 30px 20px;
+.command-description {
+    padding: 30px 32px;
     text-align: center;
 }
 .command-name {
@@ -304,10 +319,37 @@ img {
     line-height: 1.1875;
     letter-spacing: 0.03em;
 }
+
+/*Соцсети команды */
+.command-list .icon-list {
+    display: flex;
+}
+.command-list .icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--command-icon-color);
+}
+.command-list .icon-button {
+    display: block;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    border-radius: 50%;
+}
+.command-list{
+    display: flex;
+}
+.command-list .icon-button:hover {
+    background: var(--accent-color);
+    color: var(--primary-whit-color);
+}
+.icon-list .icon-item:not(:last-child){
+    margin-right: 10px;
+}
+
 /* Партнеры */
 .icon-client {
     fill: var(--command-icon-color);
-    display: flex;
     justify-content: center;
     align-items: center;
     width: 170px;
@@ -357,6 +399,10 @@ img {
     text-align: center;
     border-radius: 4px;
     border: none;
+    box-shadow: 0px 3px 1px 
+    rgb(0 0 0 / 10%), 0px 1px 2px 
+    rgb(0 0 0 / 8%), 0px 2px 2px 
+    rgb(0 0 0 / 12%);
 }
 .button:hover,
 .button:focus {
@@ -398,7 +444,15 @@ img {
     padding: 20px 24px;
     border: 1px solid var(--card-color);
 }
-
+.portfolio-list .card-link {
+    display: block;
+    min-width: 100%;
+}
+.portfolio-list .card-link:hover,
+.portfolio-list .card-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 /* Footer общий */
 .logo-copyright {
     color: var(--primary-whit-color);
@@ -443,4 +497,35 @@ img {
     color: var(--accent-color);
     font-weight: normal;
 }
-
+.icons {
+    width: 206px;
+}
+.footer-block .icon-list {
+    display: flex;
+    width: 206px;
+    justify-content: space-between;
+}
+.footer-block .icon-button {
+    display: block;
+    width: 44px;
+    height: 44px;
+    background: var(--footer-icon-bt);
+    color: var(--primary-whit-color);
+    padding: 12px;
+    border-radius: 50%;
+    fill: var(--primary-whit-color);
+}
+.icon-button:hover {
+    background: var(--accent-color);
+}
+.icons-text {
+    font-weight: bold;
+    line-height: 1.143;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.footer-container .icons-container {
+    display: flex;
+    align-items: baseline;
+    padding: 60px 0;
+}
