@@ -74,6 +74,7 @@ img {
 .icon {
     width: 20px;
     height: 20px;
+    fill: var(--command-icon-color);
 }
 
 /*Общий логотип */
@@ -140,6 +141,8 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 .contact-item:hover,
 .contact-item:focus {
@@ -244,8 +247,11 @@ img {
 .icon-features {
     display: flex;
     justify-content: center;
+    align-items: center;
+    background-position:50% 50%;
     background-color: var(--section-command-color);
-    padding: 25px 0;
+    border-radius: 4px;
+    height: 120px;
     margin-bottom: 30px;
 }
 .icon-element {
@@ -319,59 +325,79 @@ img {
     line-height: 1.1875;
     letter-spacing: 0.03em;
 }
-
-/*Соцсети команды */
-.command-list .icon-list {
-    display: flex;
-}
-.command-list .icon {
-    width: 20px;
-    height: 20px;
-    fill: var(--command-icon-color);
-}
-.command-list .icon-button {
-    display: block;
-    width: 44px;
-    height: 44px;
-    padding: 12px;
-    border-radius: 50%;
-}
 .command-list{
     display: flex;
 }
-.command-list .icon-button:hover {
-    background: var(--accent-color);
-    color: var(--primary-whit-color);
+
+/*Соцсети команды */
+.icon-list {
+    display: flex;
+    justify-content: space-between;
 }
-.icon-list .icon-item:not(:last-child){
-    margin-right: 10px;
+.icon-item {
+    width: 44px;
+    height: 44px;
+}
+.icon-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    fill: var(--command-icon-color);
+}
+.icon-button:hover .icon,
+.icon-button:focus .icon {
+    background-color: var(--accent-color); 
+}
+.icon-button:hover .icon,
+.icon-button:focus .icon {
+    fill: var(--primary-whit-color);
 }
 
 /* Партнеры */
-.icon-client {
-    fill: var(--command-icon-color);
-    justify-content: center;
-    align-items: center;
-    width: 170px;
-    height: 92px;
-    border: 1px solid var(--command-icon-color);
-    border-radius: 4px;
-    padding: 16px 32px;
+
+.client-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 0.03em;
 }
 .client-list {
     display: flex;
     justify-content: center;
 }
+.client-item {
+    width: 170px;
+    height: 92px;
+}
+.client-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--command-icon-color);
+    border-radius: 4px;
+    fill: var(--command-icon-color);
+}  
+
 .client-item:not(:last-child) {
     margin-right: 30px;
 }
-.client-title {
-    color: var(--titel-text-color);
-    font-size: 36px;
-    margin-bottom: 50px;
-    line-height: 1.166;
-    text-align: center;
-    letter-spacing: 0.03em;
+.client-link:hover,
+.client-link:focus{
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+.icon-client:hover,
+.icon-client:focus {
+    fill: var(--accent-color);
 }
 
 /* Портфолио */
@@ -500,23 +526,18 @@ img {
 .icons {
     width: 206px;
 }
-.footer-block .icon-list {
-    display: flex;
-    width: 206px;
-    justify-content: space-between;
-}
-.footer-block .icon-button {
+.icon-item{
     display: block;
     width: 44px;
     height: 44px;
     background: var(--footer-icon-bt);
-    color: var(--primary-whit-color);
     padding: 12px;
     border-radius: 50%;
-    fill: var(--primary-whit-color);
 }
-.icon-button:hover {
-    background: var(--accent-color);
+.footer-block .icon-list {
+    display: flex;
+    width: 206px;
+    justify-content: space-between;
 }
 .icons-text {
     font-weight: bold;
@@ -528,3 +549,44 @@ img {
     display: flex;
     align-items: baseline;
 }
+.icon-button {
+    fill: var(--primary-whit-color);
+}
+.icon-footer:hover,
+.icon-footer:focus {
+    background: var(--accent-color);
+}
+
+
+
+
+/*.icons {
+    width: 206px;
+}
+.footer-block .icon-list {
+    display: flex;
+    width: 206px;
+    justify-content: space-between;
+}
+.footer-block .icon-button {
+    display: block;
+    width: 44px;
+    height: 44px;
+    background: var(--footer-icon-bt);
+    padding: 12px;
+    border-radius: 50%;
+}
+.icon-button:hover {
+    background: var(--accent-color);
+    fill: var(--primary-whit-color);
+}
+.icons-text {
+    font-weight: bold;
+    line-height: 1.143;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}*/
